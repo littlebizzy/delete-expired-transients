@@ -21,7 +21,7 @@ class Factory {
 	/**
 	 * Plugin object
 	 */
-	private $plugin;
+	protected $plugin;
 
 
 
