@@ -19,16 +19,16 @@ class Transients {
 
 
 	/**
-	 * Max time removing elements
+	 * Max records per query
 	 */
-	const MAX_EXECUTION_TIME = 10;
+	const MAX_BATCH_RECORDS = 50;
 
 
 
 	/**
-	 * Max records per query
+	 * Max time removing elements
 	 */
-	const MAX_BATCH_RECORDS = 50;
+	const MAX_EXECUTION_TIME = 10;
 
 
 
@@ -52,11 +52,11 @@ class Transients {
 		// Globals
 		global $wpdb;
 
-		// Execution time allowed
-		$timeout = time() + (defined('DELETE_EXPIRED_TRANSIENTS_MAX_EXECUTION_TIME')? (int) DELETE_EXPIRED_TRANSIENTS_MAX_EXECUTION_TIME : self::MAX_EXECUTION_TIME);
+		// Limit results
+		$limit = defined('DELETE_EXPIRED_TRANSIENTS_MAX_BATCH_RECORDS')? esc_sql((int) DELETE_EXPIRED_TRANSIENTS_MAX_BATCH_RECORDS) : self::MAX_BATCH_RECORDS;
 
-		// Set limit
-		$limit = defined('DELETE_EXPIRED_TRANSIENTS_MAX_BATCH_RECORDS')? (int) DELETE_EXPIRED_TRANSIENTS_MAX_BATCH_RECORDS : self::MAX_BATCH_RECORDS;
+		// Execution time allowed
+		$timeout = time() + (defined('DELETE_EXPIRED_TRANSIENTS_MAX_EXECUTION_TIME')? esc_sql((int) DELETE_EXPIRED_TRANSIENTS_MAX_EXECUTION_TIME) : self::MAX_EXECUTION_TIME);
 
 		// Before the last minute to avoid conflicts
 		$beforeTimestamp = time() - MINUTE_IN_SECONDS;
@@ -93,15 +93,23 @@ class Transients {
 			if (empty($rows) || !is_array($rows))
 				break;
 
+// Debug
+//error_log(print_r($rows, true));
+
 			// Populate data
 			$Ids = [];
 			foreach ($rows as $row) {
-				$Ids[] = (int) $row->option_id2;
-				$Ids[] = (int) $row->option_id1;
+				$Ids[] = esc_sql((int) $row->option_id2);
+				$Ids[] = esc_sql((int) $row->option_id1);
 			}
 
+			// Prepare identifiers
+			$Ids = implode(',', $Ids);
+
+// Debug
+//error_log($Ids);
+
 			// Remove detected expired options
-			$Ids = implode(',', array_map('esc_sql', $Ids));
 			$wpdb->query("DELETE FROM {$wpdb->options} WHERE option_id IN ({$Ids})");
 		}
 	}
