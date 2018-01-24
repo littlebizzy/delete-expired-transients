@@ -13,6 +13,18 @@ class Cron {
 
 
 
+	// Constants
+	// ---------------------------------------------------------------------------------------------------
+
+
+
+	/**
+	 * Hours period
+	 */
+	const HOURS = 5;
+
+
+
 	// Properties
 	// ---------------------------------------------------------------------------------------------------
 
@@ -58,7 +70,7 @@ class Cron {
 	private function initialize() {
 
 // Debug
-$this->onSchedule();return;
+//$this->onSchedule();return;
 
 		// Schedules filter
 		add_filter('cron_schedules', [$this, 'schedules']);
@@ -84,13 +96,15 @@ $this->onSchedule();return;
 	public function schedules($schedules) {
 
 		// Define period
-		$seconds = 1;
+		$hours = defined('DELETE_EXPIRED_TRANSIENTS_HOURS')? (int) DELETE_EXPIRED_TRANSIENTS_HOURS : self::HOURS;
 
-		// Custom period
-		$schedules[$this->plugin->prefix.'_interval'] = array(
-			'interval' => $seconds,
-			'display'  => __('Delete Expired Transients in '.$seconds.' seconds'),
-		);
+		// Check custom period
+		if (!empty($hours)) {
+			$schedules[$this->plugin->prefix.'_interval'] = [
+				'interval' => $hours * HOUR_IN_SECONDS,
+				'display'  => __('Delete Expired Transients in '.$hours.' hours'),
+			];
+		}
 
 		// Done
 		return $schedules;
@@ -102,6 +116,12 @@ $this->onSchedule();return;
 	 * Start the clean procedure
 	 */
 	public function onSchedule() {
+
+		// Check external object cache
+		if (wp_using_ext_object_cache())
+			return;
+
+		// Remove expired transients
 		$this->factory->transients->cleanExpired();
 	}
 
