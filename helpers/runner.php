@@ -1,12 +1,12 @@
 <?php
 
 // Subpackage namespace
-namespace LittleBizzy\DisableEmojis\Helpers;
+namespace LittleBizzy\DeleteExpiredTransients\Helpers;
 
 /**
  * Runner class
  *
- * @package DisableEmojis
+ * @package Delete Expired Transients
  * @subpackage Helpers
  */
 class Runner {

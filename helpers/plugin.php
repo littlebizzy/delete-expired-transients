@@ -1,12 +1,12 @@
 <?php
 
 // Subpackage namespace
-namespace LittleBizzy\DisableEmojis\Helpers;
+namespace LittleBizzy\DeleteExpiredTransients\Helpers;
 
 /**
  * Plugin class
  *
- * @package Disable Emojis
+ * @package Delete Expired Transients
  * @subpackage Helpers
  */
 class Plugin {
