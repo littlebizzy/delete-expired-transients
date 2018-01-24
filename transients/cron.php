@@ -21,7 +21,7 @@ class Cron {
 	/**
 	 * Hours period
 	 */
-	const HOURS = 5;
+	const HOURS = 6;
 
 
 
