@@ -21,7 +21,7 @@ class Factory extends Helpers\Factory {
 	 * Actions object
 	 */
 	protected function createCron() {
-		return new Transients\Cron($this->plugin);
+		return new Transients\Cron($this, $this->plugin);
 	}
 
 
