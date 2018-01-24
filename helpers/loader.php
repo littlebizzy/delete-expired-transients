@@ -43,7 +43,7 @@ final class Loader {
 	/**
 	 * Loaded files
 	 */
-	private $loaded = array();
+	private $loaded = [];
 
 
 
