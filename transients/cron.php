@@ -69,11 +69,11 @@ class Cron {
 	 */
 	private function initialize() {
 
-// Debug
-//$this->onSchedule();return;
-
 		// Schedules filter
 		add_filter('cron_schedules', [$this, 'schedules']);
+
+// Debug
+//$this->onSchedule();return;
 
 		// Generation check
 		if (!wp_next_scheduled($this->plugin->prefix.'_clean'))
