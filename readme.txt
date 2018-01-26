@@ -40,6 +40,8 @@ No settings page, simply works out of the box. Performs expired transients clean
 * Records processed per query: During the execution time, the cleaning process does not retrieve all the involved records, but rather does it in batches of 50. This value can be changed using the constant:
 
     MAX_BATCH_RECORDS
+    
+NOTE: This plugin will only function if an external object cache is NOT installed.
 
 #### Compatibility ####
 
