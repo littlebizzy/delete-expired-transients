@@ -35,11 +35,11 @@ No settings page, simply works out of the box. Performs expired transients clean
 
 * Execution time: By default each process is executed 10 seconds max. This value can be overridden by the constant:
 
-    MAX_EXECUTION_TIME
+    DELETE_EXPIRED_TRANSIENTS_MAX_EXECUTION_TIME
 
 * Records processed per query: During the execution time, the cleaning process does not retrieve all the involved records, but rather does it in batches of 50. This value can be changed using the constant:
 
-    MAX_BATCH_RECORDS
+    DELETE_EXPIRED_TRANSIENTS_MAX_BATCH_RECORDS
     
 NOTE: This plugin will only function if an external object cache is NOT installed.
 
