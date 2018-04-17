@@ -187,7 +187,7 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 = 1.0.1 =
 * added recommended plugins notice
 * added rating request notice
-* added support for define('DISABLE_NAG_NOTICES', true);
+* added support for `define('DISABLE_NAG_NOTICES', true);`
 
 = 1.0.0 =
 * initial release
