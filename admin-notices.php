@@ -1,11 +1,14 @@
 <?php
 
+// Subpackage namespace
+namespace LittleBizzy\CloudFlare;
 /**
  * Admin Notices class
  *
  * @package WordPress
  * @subpackage Admin Notices
  */
+
 final class DLEXTR_Admin_Notices {
 
 
