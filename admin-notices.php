@@ -1,7 +1,7 @@
 <?php
 
 // Subpackage namespace
-namespace LittleBizzy\CloudFlare;
+namespace LittleBizzy\DeleteExpiredTransients;
 /**
  * Admin Notices class
  *
