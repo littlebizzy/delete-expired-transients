@@ -7,7 +7,7 @@ Requires at least: 4.4
 Tested up to: 4.9
 Requires PHP: 7.0
 Multisite support: No
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Prefix: DLEXTR
@@ -18,9 +18,15 @@ Deletes all expired transients upon activation and on a daily basis thereafter v
 
 Deletes all expired transients upon activation and on a daily basis thereafter via WP-Cron to maintain a cleaner database and improve performance.
 
+* [**Join our FREE Facebook group for support!**](https://www.facebook.com/groups/littlebizzy/)
+* [**Worth a 5-star review? Thank you!**](https://wordpress.org/support/plugin/delete-expired-transients-littlebizzy/reviews/?rate=5#new-post)
 * [Plugin Homepage](https://www.littlebizzy.com/plugins/delete-expired-transients)
 * [Plugin GitHub](https://github.com/littlebizzy/delete-expired-transients)
-* [SlickStack](https://slickstack.io)
+
+*Our related OSS projects:*
+
+* [SlickStack (LEMP stack automation)](https://slickstack.io)
+* [WP Lite boilerplate](https://wplite.org)
 * [Starter Theme](https://starter.littlebizzy.com)
 
 #### The Long Version ####
@@ -66,8 +72,6 @@ This plugin has been designed for use on LEMP (Nginx) web servers with PHP 7.0 a
 
 This plugin was partially inspired either in "code or concept" by the open-source software and discussions mentioned below:
 
-* [Disable Emojis](https://wordpress.org/plugins/disable-emojis/)
-
 * [WP Transients Cleaner](https://github.com/pressjitsu/wp-transients-cleaner)
 * [Delete Expired Transients](https://wordpress.org/plugins/delete-expired-transients/)
 * [Artiss Transient Cleaner](https://wordpress.org/plugins/artiss-transient-cleaner/)
@@ -90,15 +94,17 @@ We invite you to check out some of our other free plugins hosted on WP.org that 
 * [404 To Homepage](https://wordpress.org/plugins/404-to-homepage-littlebizzy/)
 * [CloudFlare](https://wordpress.org/plugins/cf-littlebizzy/)
 * [Delete Expired Transients](https://wordpress.org/plugins/delete-expired-transients-littlebizzy/)
+* [Disable Admin-AJAX](https://wordpress.org/plugins/disable-admin-ajax-littlebizzy/)
 * [Disable Author Pages](https://wordpress.org/plugins/disable-author-pages-littlebizzy/)
 * [Disable Cart Fragments](https://wordpress.org/plugins/disable-cart-fragments-littlebizzy/)
 * [Disable Embeds](https://wordpress.org/plugins/disable-embeds-littlebizzy/)
 * [Disable Emojis](https://wordpress.org/plugins/disable-emojis-littlebizzy/)
 * [Disable Empty Trash](https://wordpress.org/plugins/disable-empty-trash-littlebizzy/)
 * [Disable Image Compression](https://wordpress.org/plugins/disable-image-compression-littlebizzy/)
+* [Disable jQuery Migrate](https://wordpress.org/plugins/disable-jq-migrate-littlebizzy/)
 * [Disable Search](https://wordpress.org/plugins/disable-search-littlebizzy/)
 * [Disable WooCommerce Status](https://wordpress.org/plugins/disable-wc-status-littlebizzy/)
-* [Disable WooCommerce Styles](https://wordpress.org/plugins/diable-wc-styles-littlebizzy/)
+* [Disable WooCommerce Styles](https://wordpress.org/plugins/disable-wc-styles-littlebizzy/)
 * [Disable XML-RPC](https://wordpress.org/plugins/disable-xml-rpc-littlebizzy/)
 * [Download Media](https://wordpress.org/plugins/download-media-littlebizzy/)
 * [Download Plugin](https://wordpress.org/plugins/download-plugin-littlebizzy/)
@@ -108,6 +114,7 @@ We invite you to check out some of our other free plugins hosted on WP.org that 
 * [Force HTTPS](https://wordpress.org/plugins/force-https-littlebizzy/)
 * [Force Strong Hashing](https://wordpress.org/plugins/force-strong-hashing-littlebizzy/)
 * [Google Analytics](https://wordpress.org/plugins/ga-littlebizzy/)
+* [Header Cleanup](https://wordpress.org/plugins/header-cleanup-littlebizzy/)
 * [Index Autoload](https://wordpress.org/plugins/index-autoload-littlebizzy/)
 * [Maintenance Mode](https://wordpress.org/plugins/maintenance-mode-littlebizzy/)
 * [Profile Change Alerts](https://wordpress.org/plugins/profile-change-alerts-littlebizzy/)
@@ -133,11 +140,13 @@ We invite you to check out a few premium plugins that our team has also produced
 We thank the following groups for their generous contributions to the WordPress community which have particularly benefited us in developing our own plugins and services:
 
 * [Automattic](https://automattic.com)
+* [Brad Touesnard](https://bradt.ca)
 * [Daniel Auener](http://www.danielauener.com)
 * [Delicious Brains](https://deliciousbrains.com)
 * [Greg Rickaby](https://gregrickaby.com)
 * [Matt Mullenweg](https://ma.tt)
 * [Mika Epstein](https://halfelf.org)
+* [Mike Garrett](https://mikengarrett.com)
 * [Samuel Wood](http://ottopress.com)
 * [Scott Reilly](http://coffee2code.com)
 * [Jan Dembowski](https://profiles.wordpress.org/jdembowski)
@@ -149,6 +158,7 @@ We thank the following groups for their generous contributions to the WordPress 
 * [Rahul Bansal](https://profiles.wordpress.org/rahul286)
 * [Roots](https://roots.io)
 * [rtCamp](https://rtcamp.com)
+* [Ryan Hellyer](https://geek.hellyer.kiwi)
 * [WP Chat](https://wpchat.com)
 * [WP Tavern](https://wptavern.com)
 
@@ -174,7 +184,12 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 
 == Changelog ==
 
+= 1.0.1 =
+* added recommended plugins notice
+* added rating request notice
+* added support for define('DISABLE_NAG_NOTICES', true);
+
 = 1.0.0 =
 * initial release
-* uses PHP namespaces
+* plugin uses PHP namespaces
 * object oriented code
