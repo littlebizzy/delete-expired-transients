@@ -25,7 +25,7 @@ if (!function_exists('add_action'))
 
 // Admin Notices module
 require_once dirname(FILE).'/admin-notices.php';
-LittleBizzy\DeleteExpiredTransients\Admin_Notices::instance(FILE);
+Admin_Notices::instance(FILE);
 
 // Admin Notices Multisite module
 // uncomment return to disable plugin on Multsite
