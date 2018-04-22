@@ -2,6 +2,7 @@
 
 // Subpackage namespace
 namespace LittleBizzy\DeleteExpiredTransients;
+
 /**
  * Admin Notices class
  *
@@ -9,7 +10,7 @@ namespace LittleBizzy\DeleteExpiredTransients;
  * @subpackage Admin Notices
  */
 
-final class DLEXTR_Admin_Notices {
+final class Admin_Notices {
 
 
 
