@@ -28,7 +28,7 @@ require_once dirname(FILE).'/admin-notices.php';
 Admin_Notices::instance(FILE);
 
 // Admin Notices Multisite module
-// uncomment return to disable plugin on Multsite
+// (uncomment //return to disable plugin on Multisite)
 require_once dirname(FILE).'/admin-notices-ms.php';
 if (false !== \LittleBizzy\DeleteExpiredTransients\Admin_Notices_MS::instance(FILE)) {
 	//return;
