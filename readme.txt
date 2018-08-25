@@ -7,7 +7,7 @@ Requires at least: 4.4
 Tested up to: 4.9
 Requires PHP: 7.0
 Multisite support: No
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Prefix: DLEXTR
@@ -184,16 +184,20 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 
 == Changelog ==
 
+= 1.0.3 =
+* updated plugin meta
+
 = 1.0.2 =
-* fix: recommended plugins notice unable to "dismiss"
+* fix: could not "dismiss" recommended plugins notice
 * optimized plugin code
 
 = 1.0.1 =
 * added recommended plugins notice
 * added rating request notice
-* added support for `define('DISABLE_NAG_NOTICES', true);`
+* support for `DISABLE_NAG_NOTICES`
 
 = 1.0.0 =
 * initial release
+* tested with PHP 7.0
 * plugin uses PHP namespaces
-* object oriented code
+* plugin uses object-oriented codebase
