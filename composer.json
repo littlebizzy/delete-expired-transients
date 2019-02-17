@@ -1,0 +1,16 @@
+{
+    "name": "littlebizzy/delete-expired-transients",
+    "type": "wordpress-plugin",
+    "license": "GPLv3",
+    "homepage": "https://www.littlebizzy.com/plugins/delete-expired-transients",
+    "description": "Deletes all expired transients upon activation and on a daily basis thereafter via WP-Cron to maintain a cleaner database and improve performance.",
+    "keywords": ["wordpress","plugin","delete","clear","purge","expired","transients","cache","api"],
+    "support": {
+        "issues": "https://github.com/littlebizzy/delete-expired-transients/issues",
+        "forum": "https://www.littlebizzy.com/members"
+    }
+    "require": {
+        "php": "^7.2",
+        "composer/installers": "~1.0"
+    }
+}
