@@ -11,10 +11,10 @@ Deletes all expired transients upon activation and on a daily basis thereafter v
     define('DISABLE_NAG_NOTICES', true);
     
     /* Delete Expired Transients Functions */
-    define('DELETE_EXPIRED_TRANSIENTS', true);
-    define('DELETE_EXPIRED_TRANSIENTS_HOURS', '6');
-    define('DELETE_EXPIRED_TRANSIENTS_MAX_EXECUTION_TIME', '10');
-    define('DELETE_EXPIRED_TRANSIENTS_MAX_BATCH_RECORDS', '50');
+    define('DELETE_EXPIRED_TRANSIENTS', true); // default = true
+    define('DELETE_EXPIRED_TRANSIENTS_HOURS', '6'); // default = 6
+    define('DELETE_EXPIRED_TRANSIENTS_MAX_EXECUTION_TIME', '10'); // default = 10
+    define('DELETE_EXPIRED_TRANSIENTS_MAX_BATCH_RECORDS', '50'); // default = 50
 
 ### Compatibility
 
